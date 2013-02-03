@@ -1,0 +1,83 @@
+\Chapter{Introduction}
+
+The term web application refers to a software system that provides a user interface through a web browser. Examples of web applications include blogs, wikis, online shopping, search engines, etc.\cite{mysql-website} Web application development became an important discipline following the adoption of the Internet by ordinary users. Many businesses now rely heavily on the web for both internal applications and to provide services to customers, and so there are many employment opportunities open to individuals with web development skills.
+
+Web sites can be roughly classified as static or dynamic. Static web sites are those sites that use a web server to provide access to HTML documents that are stored in the file system. Dynamic web sites are those sites that construct the content of web pages from data that is stored in a database. The databases on which these dynamic sites are built are typically modified as a result of user interaction with site. Thus, users are presented with web pages that are uniquely generated for them based on their previous interactions with the site. The trend is for web pages to be generated from databases rather than being read from the file system.
+
+\section{Computer Languages Used for Web Application Development}
+
+There are numerous languages and frameworks that are used for web application development. Java is one of the older and more established languages in which web applications have been developed. This book covers Java-based web application development using Servlets and JSP\cite{bauer2004}. This book also covers the news feed protocol RSS version 2.0, and REST-based web services.
+
+Java is a strict object-oriented language in which all function calls are made to either static methods of classes or to non-static methods that are invoked through class instances. These classes are organized into namespaces called packages, so that unqualified class names do not need to be globally unique.
+
+An application programming interface (API) is a specification that defines how user code can access system functionality. The Java API refers to the specification that defines how Java code may access functionality, such as opening a file in the file system, creating a socket connection with another process, creating a linked-list of objects, etc. For example, the following line creates an instance of the Socket class\cite{johnson2005}, which can be used to make TCP connections to other processes.
+
+{\small
+\begin{verbatim}
+	  $ cd /opt
+	  $ tar -zxvf apache-tomcat-VERSION.tar.gz
+	  $ ln -s apache-tomcat-VERSION tomcat
+\end{verbatim}
+}
+
+The above line of code can be simplified by importing the class java.net.Socket into the local namespace by adding the following line just after the package declaration of a java source code file.
+
+import java.net.Socket;
+The above import statement allows for the following simplified version of the socket creation code give above, in which the package prefix qualifiers are dropped from the Socket class.
+
+{\small
+\begin{verbatim}
+Socket socket = new Socket("localhost", 8080);
+\end{verbatim}
+}
+
+\section{The Servlet API}
+
+The Socket class is an example of a class that is part of the core Java API, which is available in all standard Java virtual machine (JVM) environments. However, web applications typically additional functionality that is not part of the core Java API. In particular, conventional web applications need to be able to access functionality provided through the Servlet API. Implementations of the Servlet API are provided by third parties, such as Apache, IBM, Oracle, etc. In fact, the Servlet API is provided by something called a web container (or Servlet container), which is defined within an extensive specification called Java 2 Enterprise Edition (J2EE). A web container is actually a web server that loads and executes Java Servlets to process incoming requests from browsers (or other HTTP clients).
+
+\section{Project Scope}
+
+There's nothing like a good list to help organize the project scope.
+
+\begin{itemize}
+    \item I'm an item
+    \item I'm also an item
+    \item I'm the third and last item
+\end{itemize}
+
+\section{Definitions, Acronyms, and Abbreviations}
+
+The definitions, acronyms, and abbreviations used in the document are described in this section.
+
+\begin{itemize}
+    \item API: Application Program Interface is a set of routines that an application uses to request and carry out low-level services performed by a computer's operating system; also, a set of calling conventions in programming that defines how a service is invoked through the application.
+    \item CEL: The College of Extended Learning at California State University, San Bernardino.
+    \item CELORS: The College of Extended Learning Online Registration System.
+    \item CentOS: A freely available operating system that is based on Red Hat Enterprise Linux.
+    \item CSUSB: California State University, San Bernardino.
+    \item DHCP: Dynamic Host Configuration Protocol is a computer networking protocol used by devices (DHCP clients) which dynamically distributes the IP address to the destination host.
+    \item DNS: The Domain Name System is a hierarchical naming system for computers, services, or any resource connected to the Internet or a private network.
+    \item Hibernate\label{def:hibernate}: An object-relational mapping (ORM) library for the Java language which provides a framework for mapping an object-oriented domain model to a traditional relational database.
+    \item HTML: HyperText Markup Language is the authoring language used to create documents on the World Wide Web.
+    \item HTTPS: Hypertext Transfer Protocol Secure is a combination of the Hypertext Transfer Protocol and a network security protocol. This security protocol operates at a lower sublayer, encrypting an HTTP message prior to transmission and decrypting a message upon arrival.
+    \item IEP: International Extension Programs is a unit of the College of Extended Learning.
+    \item J2EE: Java 2 Platform Enterprise Edition is a platform-independent, Java-centric environment from Sun Microsystems, Inc., for developing, building, and deploying Web-based enterprise applications online. The J2EE platform consists of a set of services, APIs, and protocols that provide the functionality for developing multitiered, Web-based applications.
+    \item Java: Java is a object-oriented, cross-platform programming language from Sun Microsystems.
+    \item Java Servlet: Java Servlet technology provides Web developers with a simple, consistent mechanism for extending the functionality of a Web server and for accessing existing business systems.
+    \item JDBC: Java Database Connectivity is an API for the Java programming language that defines how a client may access a database. It provides methods for querying and updating data in a database. JDBC is oriented towards relational databases.
+    \item Join Table (also known as a ``Link Table" or ``Junction Table"): A Join Table is table that contains common fields from two tables. It is on the many side of a one-to-many relationship with the other table. It is employed when dealing with many-to-many relationships in a database.
+    \item JSP: Java Servlet Page is a server-side technology. JSPs have dynamic scripting capabilities that work in tandem with HTML code, separating the page logic from the static elements to help make the HTML more functional (i.e., dynamic database queries).
+    \item MVC\label{def:mvc}: Model-View-Controller is an architectural pattern used in software engineering to isolate business logic from user interface considerations.
+    \item Osher: Osher Lifelong Learning Institute is a unit of the College of Extended Learning. 
+    \item MySQL\label{mysql}: MySQL is a relational database management system which runs as a server providing multi-user access to a number of databases.
+    \item Paypal\label{paypal}: Paypal is an e-commerce business allowing payments and money transfers to be made through the Internet. Paypal serves as an electronic alternative to traditional paper payment methods such as checks and money orders.
+    \item PCI: Payment Card Industry.
+    \item PCI DSS\label{def:PCI_DSS}: Payment Card Industry Data Security Standard. The standard was created to help organizations that process card payments to prevent credit card fraud through increased controls around data and its exposure to compromise. 
+    \item Section 508: In 1998, the U.S. Congress amended the Rehabilitation Act to require Federal agencies to make their electronic and information technology accessible to people with disabilities. Section 508 was enacted to eliminate barriers in information technology, to make available new opportunities for people with disabilities, and to encourage development of technologies that will help achieve those goals.
+    \item Session: A session is a collection of related clients which can exchange data via defined communication paths. The session maintains the state-associated communication paths and may interact with an object which encapsulates a defined session-management policy.
+    \item Socket: An endpoint for communication between two machines.
+    \item Spring Framework\label{def:spring}: (Spring, for short) is an open-source application framework for the Java platform.
+    \item TCP/IP: Transmission Control Protocol on top of the Internet Protocol provides a reliable, point-to-point communication channel that client-server applications on the Internet use to communicate with each other. To communicate over TCP, a client program and a server program establish a connection to one another. Each program binds a socket to its end of the connection. To communicate, the client and the server each read from and write to a socket bound to the connection.
+    \item Tomcat: Apache Tomcat is a servlet container. Tomcat implements the Java Servlet and the Java Server Pages (JSP) specifications and provides a ``pure Java" HTTP Web server environment for Java code to run.
+    \item UML: The Unified Modeling Language is the industry-standard language for specifying, visualizing, constructing, and documenting the artifacts of software systems.
+\end{itemize}

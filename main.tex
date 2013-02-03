@@ -1,0 +1,75 @@
+\documentclass{sbthesis} % source: Dr. Keith Schubert
+%\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{float}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% NOTE: I didn't have to do this.  Maybe it's because I'm using Miktex.  -- David Turner
+%
+% Note: bibtex omits page number from first page of bibliography, 
+% which is not acceptable under CSUSB rules.  The following
+% command can be used to fix the problem.  For this to work,
+% you need to insert \FixBib after the first line in the bbl file 
+% that bibtex generates.  Do this each time the bibliography
+% changes.
+%
+% Source: http://www.cs.ubc.ca/~murphyk/Teaching/latex_tips.txt
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\FixBib}{%    PUT \FixBib in file.bbl after first line
+    \setlength{\parsep}{\parskip}%
+    \setlength{\itemsep}{0cm}%
+    \setlength{\topsep}{\parskip}%
+    \setlength{\parskip}{0cm}%
+    \setlength{\partopsep}{0cm}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\labelwidth}{10pt}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\leftskip}{0pt}%
+    \setlength{\leftmargin}{0pt}%
+}
+
+
+\title{My Master's Project Title}
+\TitleLineTwo{A Template to Start From}
+\author{David Turner}
+\Department
+\EmailAddress{dturner@csusb.edu}
+\Advisor{George Georgiou}
+\Committee{Kerstin Voigt}{Arturo I. Concepcion}
+\CSUSBDate{March 2010}
+
+
+\AbstractText{
+This is an example Latex document that graduate students at CSUSB can use to format their master's project reports. The remainder of this abstract is irrelevant.  The term web application refers to a software system that provides a user interface through a web browser. Examples of web applications include blogs, wikis, online shopping, search engines, etc. Web application development became an important discipline following the adoption of the Internet by ordinary users. Many businesses now rely heavily on the web for both internal applications and to provide services to customers, and so there are many employment opportunities open to individuals with web development skills.
+
+Web sites can be roughly classified as static or dynamic. Static web sites are those sites that use a web server to provide access to HTML documents that are stored in the file system. Dynamic web sites are those sites that construct the content of web pages from data that is stored in a database. The databases on which these dynamic sites are built are typically modified as a result of user interaction with site. Thus, users are presented with web pages that are uniquely generated for them based on their previous interactions with the site. The trend is for web pages to be generated from databases rather than being read from the file system.
+}
+
+\AcknowledgementText{
+I would like to thank all the people with whom I have worked while pursuing my master's degree at California State University, San Bernardino (CSUSB). I wish I could list all their names but the list would be too long and I would still probably leave some people out. Studying in the School of Computer Science and Engineering at CSUSB has been a tremendous learning experience, both personally and professionally.
+
+Thank you to the following faculty of the Computer Science and Engineering department for their invaluable guidance, advice, support, help, and patience during this project's long gestation: Dr. David Turner, Dr. Arturo Concepcion and Dr. Kerstin Voigt.
+
+Special thanks to Rojer Wilco in the Department of Radio Devices. Without his valuable suggestions and support, the Internet wouldn't be a safe a place for online transactions as it is today.
+
+I would also like to thank my wife for her undying support for my studies over the years. Finally, thanks to my parents who encouraged me all along. 
+}
+
+\begin{document}
+\Project  % defined in sbthesis.cls 
+
+\input{introduction}
+\input{database_design}
+\input{conclusion}
+
+%\appendix  not used, from Dr. Schubert's template
+
+\nocite{*}
+\Bibliography{main}
+
+\end{document}
