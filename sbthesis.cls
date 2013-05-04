@@ -42,6 +42,10 @@
 %    Chris Ballinger
 %    April 29, 2010
 %    Changes are marked with "%CBchange" along with a reason for the change. 
+%
+%    Erwin Soekianto
+%    May 4, 2013
+%    chair is now advisor, as per grad studies review letter dated May 2, 2013 (Shelby Reeder)
 
 %
 % Rules:
@@ -413,7 +417,7 @@
                                   & &      \\ \cline{1-1}\cline{3-3}
 %      \texttt{\@advisor, Chair} & & \hspace{.05in}\texttt{Date} \\
 %      \texttt{\@advisor, Chair, \@department} & & \hspace{.05in}\texttt{Date} \\      %CBchanged, replaced with below, D in "Date" needs to be lined up with the start of the line above
-      \texttt{\@advisor, Chair, \@department} & & \hspace{0in}\texttt{Date} \\
+      \texttt{\@advisor, Advisor, \@department} & & \hspace{0in}\texttt{Date} \\
 %      \texttt{\@department}   & &      \\
                                   & &      \\
 % added new lines here                                  
